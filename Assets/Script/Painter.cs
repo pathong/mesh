@@ -1,10 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
+using System.Linq;
 
-
-public class MeshExper : MonoBehaviour
+public class Painter : MonoBehaviour
 {
 
 	private Mesh _mesh;
@@ -16,10 +15,11 @@ public class MeshExper : MonoBehaviour
 	private bool isOpen;
     
 	private void Awake(){
-
 		isOpen = false;
 		PaintColor = Color.red;
 	}
+
+	public void TogglePaint(){ isOpen = !isOpen; }
 
 
 
@@ -143,12 +143,6 @@ public class MeshExper : MonoBehaviour
 	}
 
 
-
-
-	public void TogglePaint(){
-		isOpen = !isOpen;
-
-	}
 
 
 }
